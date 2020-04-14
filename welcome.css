@@ -1,0 +1,17 @@
+body{ 
+    font-family: montserrat;
+    text-align: center; 
+}
+
+nav {
+    float: left;
+    width: 10%;
+    align-content: center;
+    color: black;
+}
+
+p{
+    position: relative;
+    left: 20% !important;
+    top: 10% !important;
+}

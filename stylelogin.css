@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+  background: url(bg3.jpg) no-repeat center fixed;
+  background-size: cover;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: black;
+}
+
+
+.box {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 50%;
+  height: 45%;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.box input {
+  text-indent: 6px;
+  color: black;
+  width: 40%;
+  margin: 4px;
+  background: none;
+  padding: 6px;
+  border: 1px solid black; 
+  border-radius: 30px;
+  position: relative;
+  transform:translate(0, 150%);
+  transition: 0.25s;
+}
+
+.box input:focus{
+  width: 45%;
+  border: 1px solid orangered;
+  outline: none;
+}
+
+.box input[type = "submit"]{
+  color: black;
+  width: 42%;
+  margin: 10px;
+  background: none;
+  padding: 4px;
+  border: 1px solid black; 
+  border-radius: 20px;
+  position: relative;
+  transition: 0.25s;
+}
+
+.box input[type = "submit"]:hover {
+  width: 47%;
+  border: 1px solid blue;
+}
+
+::placeholder {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: gray;
+}
+
+p {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 16px;
+  position: relative;
+  top: 20%;
+  }
+
+.helpblock {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 16px;
+  margin: 5px;
+}
+
+content{
+  vertical-align: middle;
+}
