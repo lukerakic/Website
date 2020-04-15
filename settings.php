@@ -16,8 +16,88 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Study Planner</title>
     <link rel="icon" href="default_images/icon.png">
     <link rel="stylesheet" type="text/css" href="settings.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
 
+body{ 
+    font: 14px Montserrat; 
+    font-weight: 300;
+    text-align: center; 
+    margin: 0px;
+    padding: 0px;
+}
+
+section{
+    display: table;
+}
+
+nav{
+    position: fixed;
+    top: 0%;
+    float: left;
+    height: 100%;
+    width: 5%;
+    background: #1a2930;
+}
+
+nav ul{
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+nav img{
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+}
+
+content {
+    position: fixed;
+    left: 5%;
+    float: left;
+    width: 95%;
+    height: 100%;
+    background: #c5c1c0;
+}
+
+.dashboard{
+    position: relative;
+    top: 10%;
+    left: auto;
+}
+
+.calendar{
+    position: relative;
+    top: 15%;
+    left: auto;
+}
+
+.taskcreate{
+    position: relative;
+    top: 20%;
+    left: auto;
+}
+
+.settings{
+    position: relative;
+    top: 25%;
+    left: auto;
+    background: #f7ce3e;
+    height: 50px;
+}
+
+.areamain{
+    margin-top:7%;
+}
+
+.areamain button{
+    margin: 2%;
+}
+</style>
 <body>
     <section>
     <nav>
@@ -41,5 +121,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </a>
     </nav>
     <content>
+    <div class="areamain">
+    <form name="deltask" method="POST" action="deltaskinfo.php">
+    <button type="submit">DELETE TASK INFO</button>
+    </form>
+    <br>
+    <form name="deltest" method="POST" action="deltestinfo.php">
+    <button type="submit">DELETE TEST INFO</button>
+    </form>
+    <br>
+    <form name="delsch" method="POST" action="delschinfo.php">
+    <button type="submit">DELETE SCHEDULE INFO</button>
+    </form>
+    <br>
+    <form name="delcal" method="POST" action="delcalinfo.php">
+    <button type="submit">DELETE CALENDAR INFO</button>
+    </form>
+    <br>
+    <form name="resacc" method="POST" action="resetacc.php">
+    <button type="submit">RESET ACCOUNT</button>
+    </form>
+    <br>
+    <form name="delacc" method="POST" action="deleteacc.php">
+    <button type="submit">DELETE ACCOUNT</button>
+    </form> 
+    </div>
     </content>
     </section>

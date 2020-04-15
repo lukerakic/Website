@@ -77,7 +77,7 @@ content {
     top: 15%;
     left: auto;
     background: #f7ce3e;
-    height: 40px;
+    height: 35px;
 }
 
 .taskcreate{
@@ -97,7 +97,7 @@ content {
 }
 
 .calendarimg{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
@@ -145,10 +145,8 @@ content {
             $calendarname = "SELECT calendar FROM calendar WHERE uid = '$id'";
             $resultcalendar = mysqli_query($link, $calendarname);
             while($calendarRow = mysqli_fetch_assoc($resultcalendar)){
-                echo "<img class='calendarimg' src='calendars/" . $calendarRow['calendar'] . "' width=auto height=auto >";
+                echo "<img class='calendarimg' src='calendars/" . $calendarRow['calendar'] . "' style='width:50%;height:50%;'>";
             }
-        } else{
-            echo "No calendar found!";
         }
 
     }
