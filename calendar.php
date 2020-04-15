@@ -101,12 +101,31 @@ content {
     margin-bottom: 5%;
 }
 
+.icon{
+    width: 100%;
+    position: relative;
+    top: 5%;
+    left: -0%;
+    border-bottom-style: solid;
+    border-width: 10%;
+    border-color: black;
+    margin: 5px;
+}
+
+.icon img{
+    margin: 10%;
+    left: 11%;
+}
+
 
 </style>
 
 <body>
     <section>
     <nav>
+        <ul class=icon style="list-style-type:none;">
+            <li><img src="default_images/icon.png" width="60" height="60"></li>
+        </ul>
         <ul class=dashboard style="list-style-type:none;">
             <li><a href="welcome.php"><img src="default_images/dashboard.png" width="40" height="40"></a></li>
         </ul>
