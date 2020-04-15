@@ -15,7 +15,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <title>Study Planner</title>
     <link rel="icon" href="default_images/icon.png">
-    <link rel="stylesheet" type="text/css" href="settings.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <style>
@@ -95,7 +94,13 @@ content {
 }
 
 .areamain button{
-    margin: 2%;
+    margin: 1%;
+}
+
+button{
+    font-family: Montserrat;
+    font-size: 46px;
+    width: 20%;
 }
 </style>
 <body>
@@ -123,27 +128,27 @@ content {
     <content>
     <div class="areamain">
     <form name="deltask" method="POST" action="deltaskinfo.php">
-    <button type="submit">DELETE TASK INFO</button>
+    <button type="submit" class="btn btn-default">DELETE TASK INFO</button>
     </form>
     <br>
     <form name="deltest" method="POST" action="deltestinfo.php">
-    <button type="submit">DELETE TEST INFO</button>
+    <button type="submit" class="btn btn-default">DELETE TEST INFO</button>
     </form>
     <br>
     <form name="delsch" method="POST" action="delschinfo.php">
-    <button type="submit">DELETE SCHEDULE INFO</button>
+    <button type="submit" class="btn btn-default">DELETE SCHEDULE INFO</button>
     </form>
     <br>
     <form name="delcal" method="POST" action="delcalinfo.php">
-    <button type="submit">DELETE CALENDAR INFO</button>
+    <button type="submit" class="btn btn-default">DELETE CALENDAR INFO</button>
     </form>
     <br>
     <form name="resacc" method="POST" action="resetacc.php">
-    <button type="submit">RESET ACCOUNT</button>
+    <button type="submit" class="btn btn-warning">RESET ACCOUNT</button>
     </form>
     <br>
     <form name="delacc" method="POST" action="deleteacc.php">
-    <button type="submit">DELETE ACCOUNT</button>
+    <button type="submit" class="btn btn-danger">DELETE ACCOUNT</button>
     </form> 
     </div>
     </content>
