@@ -14,7 +14,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <title>Study Planner</title>
     <link rel="icon" href="default_images/icon.png">
-    <link rel="stylesheet" type="text/css" href="calendar.css">
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
@@ -97,6 +96,11 @@ content {
     display: inline;
 }
 
+.calendarimg{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
 
 </style>
 
@@ -138,10 +142,14 @@ content {
     }  else{
             $status = mysqli_fetch_assoc($result);
             if ($status['status'] == 1) {
-            $calendarname = "SELECT calendar FROM calendar WHERE uid = $id";
+            $calendarname = "SELECT calendar FROM calendar WHERE uid = '$id'";
             $resultcalendar = mysqli_query($link, $calendarname);
-            echo "<img src='calendars/calendar7.png' width=50% height=70% >";
-             }
+            while($calendarRow = mysqli_fetch_assoc($resultcalendar)){
+                echo "<img class='calendarimg' src='calendars/" . $calendarRow['calendar'] . "' width=auto height=auto >";
+            }
+        } else{
+            echo "No calendar found!";
+        }
 
     }
     ?>

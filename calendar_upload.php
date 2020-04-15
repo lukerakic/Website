@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'config.php';
+include_once 'config.php';
 $id = $_SESSION["id"];
 
 if (isset($_POST['uploadcalendar'])) {
